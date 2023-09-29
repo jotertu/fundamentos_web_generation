@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function validar() {
+            if (document.contato.nome.value == "") {
+                window.alert("Informe o nome, pois o campo é obrigatório!");
+                document.contato.nome.focus();
+                return false;
+            }
+
+            if (document.contato.email.value == "") {
+                window.alert("Informe o email, pois o campo é obrigatório!");
+                document.contato.email.focus();
+                return false;
+            }
+
+            if (document.contato.assunto.value == "") {
+                window.alert("Informe o assunto, pois o campo é obrigatório!");
+                document.contato.assunto.focus();
+                return false;
+            }
+        }
+    </script>
+    <header class="header">
+        <a href="/">
+            <img src="./imagens/logo.png" alt="logotipo" title="clique para voltar à home">
+        </a>
+        <nav>
+            <ul class="menu">
+                <li><a href="/">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="center-container">
+
+        <div>
+            <h1>Entre em contato</h1>
+        </div>
+
+        <form action="mailto:teste@gmail.com" method="post" enctype="text/plain" name="contato">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome">
+
+            <label for="email">E-mail:</label>
+            <input type="text" id="email" name="email">
+
+            <br><br>
+            <label for="assunto">Assunto:</label>
+            <textarea name="assunto" id="assunto" cols="70" rows="15"></textarea>
+            <br><br>
+            <button type="submit" onclick="return validar()">Enviar</button>
+        </form>
+        
+    </section>
+
+</body>
+</html>

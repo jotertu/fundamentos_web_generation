@@ -21,17 +21,16 @@ a {
 
 }
 
-body {
-    background-image: url(../imagens/background.png);
-    background-repeat: no-repeat;
-
-}
-
 a{
     text-decoration: none;
     color: white;
 }
 
+.background { 
+    background-image: url(../imagens/background.png);
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
 
 h1 {
     text-align: center;
@@ -65,7 +64,7 @@ img {
     z-index: 7;
 }
 
-.section {
+.fundocartaz {
        display: flex;
        flex-wrap: wrap;
        border-radius: 5px;
@@ -90,6 +89,7 @@ img {
     height: 100px;
     padding: 20px;
     text-align: center;
+    margin-top: -58px;
 }
 
 .header {
@@ -101,7 +101,7 @@ img {
     align-items: center;
     z-index: 10;
     position: relative;
-    margin-bottom: -100px;
+    margin-bottom: -112px;
 }
 
 .menu {
@@ -128,7 +128,7 @@ img {
 }
 
 .flex > div {
-    flex: 1 1 200px;
+    flex: 1 1 185px;
     margin: 10px;
     align-items: column;
     background-color: maroon;
@@ -138,4 +138,32 @@ img {
     text-align: center;
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+/* Estilização dos contatos*/
+
+/* Estilos para o contêiner central */
+.center-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px; /* Largura do campo */
+    height: 500px;
+    background-color: #f1f1f1;
+    text-align: center  ;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+}
+
+/* Estilos para o texto dentro do campo (opcional) */
+.center-container > form {
+    font-size: 18px; /* Tamanho da fonte do texto */
+    color: #333; /* Cor do texto */
+}
+
+.center-container > div {
+    padding: 25px;
 }
